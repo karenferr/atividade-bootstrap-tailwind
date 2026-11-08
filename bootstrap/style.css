@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap');
+:root{--ink:#17233b;--blue:#173f73;--gold:#ffc857;--cream:#fffaf1}
+*{scroll-margin-top:82px}
+body{font-family:'DM Sans',sans-serif;color:var(--ink);background:#fff}
+h1,h2,h3,.navbar-brand{font-family:'Manrope',sans-serif;font-weight:800}
+.site-nav{background:rgba(15,35,62,.94);backdrop-filter:blur(12px)}
+.hero-section{min-height:78vh;display:flex;align-items:center;color:#fff;background:linear-gradient(90deg,rgba(9,28,52,.88),rgba(9,28,52,.25)),url('https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=2000&q=90') center/cover}
+.hero-content{padding-top:5rem;padding-bottom:4rem}
+.hero-section h1{font-size:clamp(3rem,8vw,6.4rem);line-height:1.02;max-width:760px;margin:1rem 0}
+.hero-section h1 span{color:var(--gold)}
+.hero-section .lead{max-width:560px;color:#e8edf5}
+.eyebrow{font-size:.75rem;letter-spacing:.16em;font-weight:700;color:#c07824}
+.hero-section .eyebrow{color:var(--gold)}
+.section-heading{max-width:700px;margin:0 auto 2.5rem;text-align:center}
+.section-heading h2{font-size:clamp(2rem,4vw,3rem);margin:.6rem 0}
+.section-heading p{color:#667085}
+.carousel-img{height:480px;object-fit:cover;filter:brightness(.72)}
+.carousel-caption{bottom:3.2rem}
+.carousel-caption h3{font-size:clamp(1.8rem,4vw,3rem)}
+.experience-card{border:0;border-radius:1rem;overflow:hidden;box-shadow:0 12px 35px rgba(23,35,59,.09);transition:transform .2s,box-shadow .2s}
+.experience-card:hover{transform:translateY(-6px);box-shadow:0 18px 42px rgba(23,35,59,.15)}
+.experience-card img{height:220px;object-fit:cover}
+.btn-primary{background:var(--blue);border-color:var(--blue)}
+.btn-primary:hover{background:#0f2d53;border-color:#0f2d53}
+.table-section{background:var(--cream)}
+.table thead th{background:var(--blue);color:#fff;border:0;padding:1rem}
+.table td{padding:1rem}
+.contact-form{padding:2rem;border:1px solid #e8eaf0;border-radius:1.25rem;box-shadow:0 12px 35px rgba(23,35,59,.06)}
+.form-control,.form-select{padding:.8rem;border-color:#d8deea}
+.form-control:focus,.form-select:focus{border-color:#5b86b5;box-shadow:0 0 0 .2rem rgba(23,63,115,.12)}
+.site-footer{background:#10243e;color:#dce5f1}
+.site-footer a{color:var(--gold);text-decoration:none}
+@media(max-width:767px){.hero-section{min-height:75vh}.carousel-img{height:350px}.carousel-caption{bottom:2.2rem}.carousel-caption p{font-size:.9rem}.contact-form{padding:1.25rem}}
