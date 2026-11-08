@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Conheça cães e gatos que esperam por uma família.">
+  <title>Patas & Lares | Tailwind CSS</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { colors: { ocean: '#173f73', sun: '#ffc857', ink: '#17233b' }, fontFamily: { sans: ['DM Sans','sans-serif'], display: ['Manrope','sans-serif'] } } } };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-sans text-ink">
+<header class="fixed inset-x-0 top-0 z-40 bg-slate-950/90 text-white backdrop-blur">
+  <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4" aria-label="Navegação principal">
+    <a href="#inicio" class="font-display text-xl font-extrabold">☀ Patas & Lares</a>
+    <button id="menuButton" class="rounded-lg border border-white/30 px-3 py-2 text-sm lg:hidden" aria-expanded="false" aria-controls="menuMobile">Menu ☰</button>
+    <ul class="hidden items-center gap-8 text-sm font-semibold lg:flex">
+      <li><a class="hover:text-sun" href="#adote">Animais para adoção</a></li><li><a class="hover:text-sun" href="#processo">Etapas</a></li><li><a class="hover:text-sun" href="#contato">Contato</a></li>
+    </ul>
+  </nav>
+  <div id="menuMobile" class="hidden border-t border-white/10 px-5 pb-4 lg:hidden">
+    <a class="block py-2" href="#adote">Animais para adoção</a><a class="block py-2" href="#processo">Etapas</a><a class="block py-2" href="#contato">Contato</a>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="hero flex min-h-[78vh] items-center text-white">
+    <div class="mx-auto w-full max-w-7xl px-5 pb-12 pt-32">
+      <span class="text-xs font-bold tracking-[.2em] text-sun">ADOÇÃO RESPONSÁVEL • AMOR SEM FIM</span>
+      <h1 class="mt-5 max-w-3xl font-display text-5xl font-extrabold leading-[1.03] sm:text-7xl lg:text-8xl">Um lar cheio de amor começa <span class="text-sun">com você.</span></h1>
+      <p class="mt-6 max-w-xl text-lg text-slate-200">Conheça nossos animais e encontre um novo melhor amigo.</p>
+      <a href="#adote" class="mt-8 inline-flex rounded-full bg-sun px-7 py-3 font-bold text-slate-950 transition hover:-translate-y-1 hover:bg-amber-300">Conheça os animais</a>
+    </div>
+  </section>
+
+  <section id="adote" class="mx-auto max-w-7xl px-5 py-20">
+    <div class="section-heading mb-10 text-center"><span class="text-xs font-bold tracking-[.18em] text-amber-700">ENCONTRE SEU NOVO MELHOR AMIGO</span><h2 class="mt-3 font-display text-3xl font-extrabold sm:text-5xl">Amigos que esperam por uma família</h2><p class="mt-4 text-slate-500">Adote com responsabilidade. Cada animal merece cuidado, respeito e carinho.</p></div>
+
+    <div class="relative mb-14 overflow-hidden rounded-3xl shadow-xl" aria-label="Carrossel de destaques">
+      <div id="slides" class="relative h-[360px] sm:h-[480px]">
+        <article class="slide active-slide absolute inset-0"><img class="h-full w-full object-cover" src="https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=1600&q=85" alt="Cão aguardando adoção"><div class="slide-shade absolute inset-0 flex flex-col justify-end p-8 text-white sm:p-12"><span class="w-fit rounded-full bg-sun px-3 py-1 text-xs font-bold text-slate-900">ADOÇÃO</span><h3 class="mt-4 font-display text-3xl font-extrabold sm:text-5xl">Um novo começo para todos</h3><p class="mt-2">Amor, cuidado e uma família para chamar de sua.</p></div></article>
+        <article class="slide absolute inset-0"><img class="h-full w-full object-cover" src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?auto=format&fit=crop&w=1600&q=85" alt="Cachorro recebendo carinho"><div class="slide-shade absolute inset-0 flex flex-col justify-end p-8 text-white sm:p-12"><span class="w-fit rounded-full bg-sun px-3 py-1 text-xs font-bold text-slate-900">CUIDADO</span><h3 class="mt-4 font-display text-3xl font-extrabold sm:text-5xl">Cada focinho merece uma chance</h3><p class="mt-2">Resgatamos, cuidamos e buscamos famílias responsáveis.</p></div></article>
+        <article class="slide absolute inset-0"><img class="h-full w-full object-cover" src="https://images.unsplash.com/photo-1573865526739-10659fec78a5?auto=format&fit=crop&w=1600&q=85" alt="Gato aguardando adoção"><div class="slide-shade absolute inset-0 flex flex-col justify-end p-8 text-white sm:p-12"><span class="w-fit rounded-full bg-sun px-3 py-1 text-xs font-bold text-slate-900">SEJA PARTE</span><h3 class="mt-4 font-display text-3xl font-extrabold sm:text-5xl">Adote, apadrinhe ou ajude</h3><p class="mt-2">Toda ajuda aproxima um animal de um futuro melhor.</p></div></article>
+      </div>
+      <button id="prevSlide" class="absolute left-4 top-1/2 -translate-y-1/2 rounded-full bg-black/50 px-4 py-3 text-xl text-white hover:bg-black/75" aria-label="Slide anterior">‹</button>
+      <button id="nextSlide" class="absolute right-4 top-1/2 -translate-y-1/2 rounded-full bg-black/50 px-4 py-3 text-xl text-white hover:bg-black/75" aria-label="Próximo slide">›</button>
+      <div id="slideDots" class="absolute bottom-4 left-1/2 flex -translate-x-1/2 gap-2"><button class="dot active-dot" aria-label="Ir para slide 1"></button><button class="dot" aria-label="Ir para slide 2"></button><button class="dot" aria-label="Ir para slide 3"></button></div>
+    </div>
+
+    <div class="grid gap-6 md:grid-cols-3">
+      <article class="overflow-hidden rounded-2xl bg-white shadow-lg transition hover:-translate-y-1"><img class="h-52 w-full object-cover" src="https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=900&q=80" alt="Cão de estimação"><div class="p-6"><span class="text-xs font-bold tracking-widest text-amber-700">CÃO • 2 ANOS</span><h3 class="mt-2 font-display text-xl font-bold">Bento</h3><p class="mt-2 text-slate-600">Carinhoso, brincalhão e fã de passeios. Está pronto para encontrar uma família.</p><a href="#contato" class="mt-5 inline-block rounded-full border border-ocean px-5 py-2 font-semibold text-ocean hover:bg-ocean hover:text-white">Tenho interesse</a></div></article>
+      <article class="overflow-hidden rounded-2xl bg-white shadow-lg transition hover:-translate-y-1"><img class="h-52 w-full object-cover" src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?auto=format&fit=crop&w=900&q=80" alt="Gato de estimação"><div class="p-6"><span class="text-xs font-bold tracking-widest text-amber-700">GATO • 1 ANO</span><h3 class="mt-2 font-display text-xl font-bold">Nino</h3><p class="mt-2 text-slate-600">Curioso e tranquilo. Gosta de observar tudo de um lugar confortável e receber carinho.</p><a href="#contato" class="mt-5 inline-block rounded-full border border-ocean px-5 py-2 font-semibold text-ocean hover:bg-ocean hover:text-white">Tenho interesse</a></div></article>
+      <article class="overflow-hidden rounded-2xl bg-white shadow-lg transition hover:-translate-y-1"><img class="h-52 w-full object-cover" src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=900&q=80" alt="Dois cães juntos"><div class="p-6"><span class="text-xs font-bold tracking-widest text-amber-700">CÃO • 8 MESES</span><h3 class="mt-2 font-display text-xl font-bold">Pipoca</h3><p class="mt-2 text-slate-600">Cheia de energia e muito sociável. Está pronta para descobrir o mundo com sua família.</p><a href="#contato" class="mt-5 inline-block rounded-full border border-ocean px-5 py-2 font-semibold text-ocean hover:bg-ocean hover:text-white">Tenho interesse</a></div></article>
+    </div>
+  </section>
+
+  <section id="processo" class="bg-amber-50 px-5 py-20">
+    <div class="mx-auto max-w-7xl"><div class="section-heading mb-10 text-center"><span class="text-xs font-bold tracking-[.18em] text-amber-700">ADOÇÃO RESPONSÁVEL</span><h2 class="mt-3 font-display text-3xl font-extrabold sm:text-5xl">Como funciona a adoção?</h2><p class="mt-4 text-slate-500">Conheça as etapas para uma adoção consciente e segura.</p></div>
+      <div class="overflow-x-auto rounded-2xl bg-white shadow"><table class="w-full min-w-[650px] border-collapse text-left"><caption class="sr-only">Etapas do processo de adoção responsável</caption><thead class="bg-ocean text-white"><tr><th class="p-4">Etapa</th><th class="p-4">O que acontece</th><th class="p-4">Objetivo</th></tr></thead><tbody class="divide-y divide-slate-100 [&_tr:nth-child(even)]:bg-slate-50"><tr><td class="p-4">1. Primeiro contato</td><td class="p-4">Preenchimento do formulário de interesse.</td><td class="p-4">Conhecer a família interessada.</td></tr><tr><td class="p-4">2. Conversa</td><td class="p-4">Conversa sobre rotina, espaço e expectativas.</td><td class="p-4">Avaliar compatibilidade.</td></tr><tr><td class="p-4">3. Orientação</td><td class="p-4">Explicação sobre cuidados e responsabilidades.</td><td class="p-4">Preparar para a adoção.</td></tr><tr><td class="p-4">4. Encontro</td><td class="p-4">Agendamento para conhecer o animal.</td><td class="p-4">Promover aproximação.</td></tr><tr><td class="p-4">5. Adoção</td><td class="p-4">Organização da chegada ao novo lar.</td><td class="p-4">Construir um vínculo responsável.</td></tr></tbody></table></div>
+    </div>
+  </section>
+
+  <section id="contato" class="mx-auto grid max-w-7xl gap-10 px-5 py-20 lg:grid-cols-[.8fr_1.2fr]">
+    <div><span class="text-xs font-bold tracking-[.18em] text-amber-700">FAÇA PARTE DA MUDANÇA</span><h2 class="mt-3 font-display text-3xl font-extrabold sm:text-4xl">Seu próximo melhor amigo pode estar aqui.</h2><p class="mt-4 text-slate-600">Preencha o formulário para demonstrar interesse. Este formulário é demonstrativo e não envia dados para um servidor.</p><button id="openModal" class="mt-5 rounded-full bg-ocean px-6 py-3 font-semibold text-white hover:bg-blue-950">Como funciona a adoção?</button></div>
+    <form id="contactForm" class="grid gap-4 rounded-3xl border border-slate-200 p-6 shadow-lg sm:grid-cols-2" novalidate>
+      <div><label for="nome" class="mb-2 block text-sm font-semibold">Nome</label><input id="nome" name="nome" required class="w-full rounded-xl border border-slate-300 px-4 py-3 outline-none focus:border-ocean focus:ring-2 focus:ring-blue-100" placeholder="Seu nome"><p class="error hidden">Informe seu nome.</p></div>
+      <div><label for="email" class="mb-2 block text-sm font-semibold">E-mail</label><input id="email" name="email" type="email" required class="w-full rounded-xl border border-slate-300 px-4 py-3 outline-none focus:border-ocean focus:ring-2 focus:ring-blue-100" placeholder="voce@email.com"><p class="error hidden">Informe um e-mail válido.</p></div>
+      <div><label for="interesse" class="mb-2 block text-sm font-semibold">Animal de interesse</label><select id="interesse" name="interesse" required class="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 outline-none focus:border-ocean focus:ring-2 focus:ring-blue-100"><option value="">Selecione</option><option>Bento</option><option>Nino</option><option>Pipoca</option><option>Quero orientação</option></select><p class="error hidden">Selecione uma opção.</p></div>
+      <div><label for="telefone" class="mb-2 block text-sm font-semibold">Telefone</label><input id="telefone" name="telefone" type="tel" pattern="[0-9() +.-]{8,}" placeholder="(00) 00000-0000" required class="w-full rounded-xl border border-slate-300 px-4 py-3 outline-none focus:border-ocean focus:ring-2 focus:ring-blue-100"><p class="error hidden">Informe um telefone válido.</p></div>
+      <div class="sm:col-span-2"><label for="mensagem" class="mb-2 block text-sm font-semibold">Mensagem</label><textarea id="mensagem" name="mensagem" rows="4" required class="w-full rounded-xl border border-slate-300 px-4 py-3 outline-none focus:border-ocean focus:ring-2 focus:ring-blue-100" placeholder="Conte um pouco sobre sua rotina e seu lar..."></textarea><p class="error hidden">Escreva uma mensagem.</p></div>
+      <div class="sm:col-span-2"><button class="rounded-full bg-sun px-7 py-3 font-bold text-slate-950 hover:bg-amber-300" type="submit">Enviar interesse</button><p id="formFeedback" class="mt-3 text-sm" role="status" aria-live="polite"></p></div>
+    </form>
+  </section>
+</main>
+
+<footer class="bg-slate-950 px-5 py-6 text-slate-300"><div class="mx-auto flex max-w-7xl flex-col justify-between gap-2 sm:flex-row"><span>© 2026 Patas & Lares — Projeto acadêmico.</span><a href="#inicio" class="text-sun hover:underline">Voltar ao topo ↑</a></div></footer>
+
+<div id="infoModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-slate-950/60 p-5" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="w-full max-w-lg rounded-3xl bg-white p-7 shadow-2xl"><div class="flex items-center justify-between"><h2 id="modalTitle" class="font-display text-2xl font-extrabold">Sobre a adoção responsável</h2><button id="closeModal" class="rounded-full px-3 py-1 text-2xl text-slate-500 hover:bg-slate-100" aria-label="Fechar">×</button></div><p class="mt-5 text-slate-600">Esta versão demonstra os seis componentes usando Tailwind CSS e classes utilitárias.</p><p class="mt-3 text-slate-600">Os animais, contatos e informações são fictícios e foram criados para fins acadêmicos.</p><div class="mt-7 flex justify-end"><button id="confirmModal" class="rounded-full bg-ocean px-6 py-3 font-semibold text-white">Entendi</button></div></div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

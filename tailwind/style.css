@@ -1,0 +1,12 @@
+html{scroll-behavior:smooth;scroll-padding-top:88px}
+body{margin:0}
+.hero{background:linear-gradient(90deg,rgba(9,28,52,.9),rgba(9,28,52,.2)),url('https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=2000&q=90') center/cover}
+.slide{opacity:0;visibility:hidden;transition:opacity .55s ease}
+.slide.active-slide{opacity:1;visibility:visible}
+.slide-shade{background:linear-gradient(0deg,rgba(8,22,40,.78),transparent 78%)}
+.dot{height:10px;width:10px;border-radius:999px;background:rgba(255,255,255,.55);transition:all .2s}
+.dot.active-dot{width:28px;background:#ffc857}
+.error{margin-top:5px;font-size:.8rem;color:#b91c1c}
+.invalid{border-color:#dc2626!important}
+.modal-open{overflow:hidden}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important}}
